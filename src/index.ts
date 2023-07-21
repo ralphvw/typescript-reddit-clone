@@ -1,4 +1,3 @@
-/// <reference path="custom.d.ts" />
 import db from './config/db';
 import dotenv from 'dotenv';
 import { ApolloServer } from '@apollo/server'
