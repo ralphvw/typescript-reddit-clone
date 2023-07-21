@@ -1,8 +1,9 @@
 interface Post {
     id: number,
-    createdAt: Date,
-    updatedAt: Date,
-    title: String
+    createdAt?: Date,
+    updatedAt?: Date,
+    text?: String,
+    user?: User
 }
 
 export default Post;

@@ -1,10 +1,20 @@
 import gql from "graphql-tag"
 const Post = gql`
  type Post {
-    id: String
+    id: String!
     title: String!
-    createdAt: Date
-    updatedAt: Date
+    createdAt: String
+    updatedAt: String
+ }
+
+ type PostsResponse {
+    status: Int!
+    message: String!
+    data: [Post]
+ }
+
+ extend type Query {
+    getAllPosts: PostsResponse!
  }
 `
 export default Post;
