@@ -1,0 +1,11 @@
+{
+    "dev": {
+      "driver": "pg",
+      "user": { "ENV": "REDDIT_CLONE_DATABASE_USER" },
+      "password": { "ENV": "REDDIT_CLONE_DATABASE_PASSWORD"},
+      "host": { "ENV": "REDDIT_CLONE_DATABSE_HOST" },
+      "port": { "ENV": "REDDIT_CLONE_DATABASE_PORT"},
+      "database": { "ENV": "REDDIT_CLONE_DATABASE_NAME" },
+      "schema": "public"
+    }
+  }
