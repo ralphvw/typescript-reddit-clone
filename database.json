@@ -1,3 +1,4 @@
 {
-    "development": {"ENV": "REDDIT_CLONE_DB_URL"}
+    "development": {"ENV": "REDDIT_CLONE_DB_URL"},
+    "sql-file": true
   }
