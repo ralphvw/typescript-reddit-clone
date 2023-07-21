@@ -1,5 +1,5 @@
 interface Post {
-    id: string,
+    id: number,
     createdAt: Date,
     updatedAt: Date,
     title: String
