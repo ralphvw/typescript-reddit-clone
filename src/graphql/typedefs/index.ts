@@ -1,6 +1,7 @@
 import Post from "./post";
 import User from "./user";
+import root from "./root";
 
-const typeDefs = [Post, User];
+const typeDefs = [root, Post, User];
 
 export default typeDefs

@@ -30,12 +30,14 @@ const main = async () => {
         plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
     })
 
+    await server.start();
+    
     app.use('/', bodyParser.json(), expressMiddleware(server, {
         context: async ({req}) => ({
             user: authenticate(req)
         })
     }))
-    await server.start();
+
     db.connect()
     .then(() => {
       httpServer.listen(port, async () => {

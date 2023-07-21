@@ -1,7 +1,7 @@
 import argon2 from 'argon2'
-import GenericHelper from 'src/helpers/generic.helper'
+import GenericHelper from '../helpers/generic.helper'
 import userQueries from '../db/queries/user'
-import db from 'src/config/db';
+import db from '../config/db';
 
 const { generateId } = GenericHelper;
 const { addUser, getUserByUsername } = userQueries;

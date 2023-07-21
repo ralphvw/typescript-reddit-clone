@@ -1,5 +1,5 @@
-import UserService from "src/service/user"
-import GenericHelper from "src/helpers/generic.helper"
+import UserService from "../../service/user"
+import GenericHelper from "../../helpers/generic.helper"
 
 const { signup, getUserByUsername } = UserService
 const { sendGraphQLResponse } = GenericHelper

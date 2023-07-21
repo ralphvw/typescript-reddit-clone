@@ -1,6 +1,6 @@
-import db from "src/config/db";
-import postQueries from "src/db/queries/post";
-import Post from "src/models/post";
+import db from "../config/db";
+import postQueries from "../db/queries/post";
+import Post from "../models/post";
 
 const { getAllPosts } = postQueries;
 

@@ -1,5 +1,5 @@
-import PostService from "src/service/post";
-import GenericHelper from "src/helpers/generic.helper";
+import PostService from "../../service/post";
+import GenericHelper from "../../helpers/generic.helper";
 
 const { getAllPosts } = PostService;
 const { sendGraphQLResponse } = GenericHelper
