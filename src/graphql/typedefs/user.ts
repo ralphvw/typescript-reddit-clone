@@ -3,6 +3,7 @@ import gql from "graphql-tag";
 const User = gql`
     type User {
         id: String
+        token: String
         username: String
         password: String
         createdAt: String
@@ -20,7 +21,8 @@ const User = gql`
     }
 
     extend type Mutation {
-        signup(username: String, password: String): UserResponse
+        signup(username: String!, password: String!): UserResponse!
+        login(username: String!, password: String!): UserResponse!
     }
 `
 

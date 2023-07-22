@@ -31,7 +31,7 @@ const main = async () => {
     })
 
     await server.start();
-    
+
     app.use('/', bodyParser.json(), expressMiddleware(server, {
         context: async ({req}) => ({
             user: authenticate(req)
@@ -42,7 +42,7 @@ const main = async () => {
     .then(() => {
       httpServer.listen(port, async () => {
         console.info(
-          `🚀🚀 Server ready at http://localhost:${port}/api/v1/graphql`
+          `🚀🚀 Server ready at http://localhost:${port}`
         );
       });
     })

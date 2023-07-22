@@ -8,8 +8,8 @@ export default {
     `,
 
     getUserByUsername: `
-    SELECT username 
+    SELECT id, username, password 
     FROM users
-    WHERE id=$1
-    `
+    WHERE username=$1
+    `,
 }

@@ -16,7 +16,7 @@ class GenericHelper {
      * @param {any} data - JSON response
      * @returns {any}
      */
-    static sendGraphQLResponse(status: number, message: string, data: any): any {
+    static response(status: number, message: string, data: any): any {
         return {
             status,
             message,
