@@ -9,6 +9,7 @@ import { createServer } from 'http';
 import bodyParser from 'body-parser'
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer'
 import { expressMiddleware } from '@apollo/server/express4'
+import cors from 'cors'
 
 dotenv.config();
 
@@ -32,7 +33,14 @@ const main = async () => {
 
     await server.start();
 
-    app.use('/', bodyParser.json(), expressMiddleware(server, {
+    const allowedOrigins = ['http://localhost:3000'];
+
+    app.use('/', cors<cors.CorsRequest>(
+        {
+            origin: allowedOrigins,
+            credentials: true
+        }
+    ), bodyParser.json(), expressMiddleware(server, {
         context: async ({req}) => ({
             user: authenticate(req)
         })
