@@ -1,8 +1,9 @@
 interface Post {
-    id: number,
+    id?: number,
     createdAt?: Date,
     updatedAt?: Date,
     text?: String,
+    userId?: String,
     user?: User
 }
 
