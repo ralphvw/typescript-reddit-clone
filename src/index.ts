@@ -33,14 +33,8 @@ const main = async () => {
 
     await server.start();
 
-    const allowedOrigins = ['http://localhost:3000'];
 
-    app.use('/', cors<cors.CorsRequest>(
-        {
-            origin: allowedOrigins,
-            credentials: true
-        }
-    ), bodyParser.json(), expressMiddleware(server, {
+    app.use('/', cors(), bodyParser.json(), expressMiddleware(server, {
         context: async ({req}) => ({
             user: authenticate(req)
         })
